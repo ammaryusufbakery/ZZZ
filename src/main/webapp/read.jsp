@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home - Spectacle Management System</title>
+<title>View Spectacles</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,10 +19,23 @@
 	    </ul>
 	  </nav>
 </header>
+
   <main>
     <section>
-      <h1>Welcome to the Spectacle Management System</h1>
-      <p>Select an option from the menu to perform CRUD operations.</p>
+      <h2>All Spectacles</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Spectacle data goes here -->
+        </tbody>
+      </table>
     </section>
   </main>
 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home - Spectacle Management System</title>
+<title>Delete Spectacle</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,8 +21,12 @@
 </header>
   <main>
     <section>
-      <h1>Welcome to the Spectacle Management System</h1>
-      <p>Select an option from the menu to perform CRUD operations.</p>
+      <h2>Delete a Spectacle</h2>
+      <form>
+        <label for="id">Spectacle ID:</label>
+        <input type="number" id="id" name="id" required>
+        <button type="submit">Delete Spectacle</button>
+      </form>
     </section>
   </main>
 

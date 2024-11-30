@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home - Spectacle Management System</title>
+<title>Update Spectacle</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,10 +19,25 @@
 	    </ul>
 	  </nav>
 </header>
+
   <main>
     <section>
-      <h1>Welcome to the Spectacle Management System</h1>
-      <p>Select an option from the menu to perform CRUD operations.</p>
+      <h2>Update Existing Spectacle</h2>
+      <form>
+        <label for="id">Spectacle ID:</label>
+        <input type="number" id="id" name="id" required>
+
+        <label for="name">New Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="brand">New Brand:</label>
+        <input type="text" id="brand" name="brand">
+
+        <label for="price">New Price:</label>
+        <input type="number" id="price" name="price">
+
+        <button type="submit">Update Spectacle</button>
+      </form>
     </section>
   </main>
 
