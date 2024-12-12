@@ -7,9 +7,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.*;
+import java.math.*;
 
 /**
  * Servlet implementation class UpdateServlet
@@ -45,17 +44,17 @@ public class UpdateServlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		String name = request.getParameter("name");
 		String brand = request.getParameter("brand");
-		double price = Double.parseDouble(request.getParameter("price"));
+		BigDecimal price = new BigDecimal(request.getParameter("price"));
 		
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "POKEMON", "system");
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			Connection con = DriverManager.getConnection("jdbc:sqlserver://nuggetserver.database.windows.net:1433;database=NuggetEyewear;user=POKEMON@nuggetserver;password=Nugget123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
 			String sql = "UPDATE product SET productname=?, productbrand=?, productprice=? WHERE productid=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			
 			ps.setString(1, name);
 			ps.setString(2, brand);
-			ps.setDouble(3, price);
+			ps.setBigDecimal(3, price);
 			ps.setInt(4, id);
 			
 			ps.executeUpdate();
