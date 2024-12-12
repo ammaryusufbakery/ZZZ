@@ -30,8 +30,8 @@
       	int id = Integer.parseInt(request.getParameter("id"));
       	
       	try {
-  			Class.forName("oracle.jdbc.driver.OracleDriver");
-  			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "POKEMON", "system");
+  			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+  			Connection con = DriverManager.getConnection("jdbc:sqlserver://nuggetserver.database.windows.net:1433;database=NuggetEyewear;user=POKEMON@nuggetserver;password=Nugget123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
   			
   			String sql = "SELECT * FROM product WHERE productid = ?";
   			PreparedStatement ps = con.prepareStatement(sql);
@@ -53,7 +53,7 @@
   				out.println("</tr>");
   				out.println("<tr>");
   				out.println("<td>Product Price</td>");
-  				out.println("<td>" + rs.getDouble(4) + "</td>");
+  				out.println("<td>" + rs.getBigDecimal(4) + "</td>");
   				out.println("</tr>");
   			}
   			con.close();
