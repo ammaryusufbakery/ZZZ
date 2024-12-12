@@ -47,7 +47,7 @@
   				out.println("<td>" + rs.getInt(1) + "</td>");
   				out.println("<td>" + rs.getString(2) + "</td>");
   				out.println("<td>" + rs.getString(3) + "</td>");
-  				out.println("<td>" + rs.getDouble(4) + "</td>");
+  				out.println("<td>" + rs.getBigDecimal(4) + "</td>");
   				out.print("<td> <a href=\"view.jsp?id=" + rs.getInt(1) + "\"> View </a> </td>");
   				out.print("<td> <a href=\"update.jsp?id=" + rs.getInt(1) + "\"> Update </a> </td>");
   				out.print("<td> <a href=\"delete.jsp?id=" + rs.getInt(1) + "\"> Delete </a> </td>");
