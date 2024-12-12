@@ -36,6 +36,7 @@
         <tbody>
           
           <% try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
   			Connection con = DriverManager.getConnection("jdbc:sqlserver://nuggetserver.database.windows.net:1433;database=NuggetEyewear;user=POKEMON@nuggetserver;password=Nugget123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
   			
   			Statement stmt = con.createStatement();
