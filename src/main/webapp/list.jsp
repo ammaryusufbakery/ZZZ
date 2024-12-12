@@ -36,8 +36,7 @@
         <tbody>
           
           <% try {
-  			Class.forName("oracle.jdbc.driver.OracleDriver");
-  			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "POKEMON", "system");
+  			Connection con = DriverManager.getConnection(jdbc:sqlserver://nuggetserver.database.windows.net:1433;database=NuggetEyewear;user=POKEMON@nuggetserver;password=Nugget123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;);
   			
   			Statement stmt = con.createStatement();
   			String sql = "SELECT * FROM product ORDER BY productid";
