@@ -13,9 +13,7 @@
 	    <ul class="menu">
 	      <li><a href="index.jsp">Home</a></li>
 	      <li><a href="create.jsp">Create</a></li>
-	      <li><a href="read.jsp">Read</a></li>
-	      <li><a href="update.jsp">Update</a></li>
-	      <li><a href="delete.jsp">Delete</a></li>
+	      <li><a href="list.jsp">Products</a></li>
 	    </ul>
 	  </nav>
 </header>

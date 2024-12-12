@@ -14,9 +14,7 @@
         <ul class="menu">
           <li><a href="index.jsp">Home</a></li>
           <li><a href="create.jsp">Create</a></li>
-          <li><a href="read.jsp">Read</a></li>
-          <li><a href="update.jsp">Update</a></li>
-          <li><a href="delete.jsp">Delete</a></li>
+          <li><a href="list.jsp">Products</a></li>
         </ul>
       </div>
     </nav>
@@ -25,7 +23,7 @@
   <main>
     <section>
       <h2>Add New Spectacle</h2>
-      <form>
+      <form action="CreateServlet" method="post">
         <label for="name">Spectacle Name:</label>
         <input type="text" id="name" name="name" required>
 
