@@ -31,7 +31,7 @@
       	
       	try {
   			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-  			Connection con = DriverManager.getConnection("jdbc:sqlserver://nuggetserver.database.windows.net:1433;database=NuggetEyewear;user=POKEMON@nuggetserver;password=Nugget123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+  			Connection con = DriverManager.getConnection("jdbc:sqlserver://nuggeteyewear.database.windows.net:1433;database=NuggetEyewear;user=POKEMON@nuggeteyewear;password=Nugget123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;jdbc:sqlserver://nuggeteyewear.database.windows.net:1433;database=NuggetEyewear;user=POKEMON@nuggeteyewear;password=Nugget123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
   			
   			String sql = "SELECT * FROM product WHERE productid = ?";
   			PreparedStatement ps = con.prepareStatement(sql);
