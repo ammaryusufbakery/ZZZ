@@ -41,17 +41,17 @@ public class CreateServlet extends HttpServlet {
 		//retrieve input from HTML
 		String name = request.getParameter("name");
 		String brand = request.getParameter("brand");
-		double price = Double.parseDouble(request.getParameter("price"));
+		BigDecimal price = new BigDecimal(request.getParameter("price"));
 		
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "POKEMON", "system");
-			String sql = "INSERT INTO product(productid, productname, productbrand, productprice) VALUES(product_id_seq.NEXTVAL,?,?,?)";
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			Connection con = DriverManager.getConnection("jdbc:sqlserver://nuggetserver.database.windows.net:1433;database=NuggetEyewear;user=POKEMON@nuggetserver;password=Nugget123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+			String sql = "INSERT INTO product(productname, productbrand, productprice) VALUES(?,?,?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 			
 			ps.setString(1, name);
 			ps.setString(2, brand);
-			ps.setDouble(3, price);
+			ps.setBigDecimal(3, price);
 			
 			ps.executeUpdate();
 			con.close();
