@@ -57,6 +57,7 @@
   		}
   		catch (Exception e){
   			System.out.println(e);
+			out.println("Error: " + e.getMessage());
   		} %>
           
         </tbody>
